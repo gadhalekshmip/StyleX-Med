@@ -7,10 +7,9 @@ Developed novel hybrid architecture combining RBF Thin Plate Spline warping for 
 
 Designed landmark-constrained GAN inversion with 50× weighted geometric loss (compensating for 100× magnitude difference between pixel and landmark losses), achieving <3px drift on fixed landmarks while enabling 10-11px chin transformations
 
-Trained ViT-B/16 classifier (84.2% validation accuracy) and landmark regressor for adaptive amplification control, integrating confidence-based warping strength selection (1.8-4.5× range) to handle variable baseline convexity
+Trained ViT-B/16 classifier (89.2% validation accuracy) and landmark regressor for adaptive amplification control, integrating confidence-based warping strength selection (1.8-4.5× range) to handle variable baseline convexity
 
 Overcame severe dataset imbalance (63% CONVEX, 7% STRAIGHT training data) through multi-objective GAN regularization: StyleX classifier loss (0.5×), landmark consistency loss (2.0×), and diversity penalty (0.1×), achieving balanced 31/31/31% generation distribution
 
 Achieved 80% visual success rate for CONVEX→STRAIGHT transformations with photorealistic output and anatomical validity, establishing proof-of-concept for orthodontic treatment visualization and patient communication
 
-Conducted rigorous failure analysis: Identified classifier degradation on transformed images (84% → 40% accuracy) due to warping artifacts; proposed data augmentation solutions (retraining on warped samples) demonstrating scientific maturity
